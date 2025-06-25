@@ -3,107 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chính sách Quyền riêng tư cho DishLocal</title>
+    <title>Chính sách Quyền riêng tư - DishLocal</title>
+    <!-- Thêm thư viện Font Awesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        /* --- Biến CSS để dễ dàng tùy chỉnh --- */
+        :root {
+            --primary-color: #0056b3;      /* Xanh dương đậm chuyên nghiệp */
+            --danger-color: #dc3545;       /* Đỏ cho cảnh báo khẩn cấp */
+            --text-color: #343a40;         /* Màu chữ chính (xám đậm) */
+            --text-secondary-color: #6c757d;/* Màu chữ phụ */
+            --bg-color: #f8f9fa;           /* Màu nền trang */
+            --container-bg: #ffffff;       /* Màu nền khối nội dung */
+            --border-color: #dee2e6;       /* Màu viền */
+            --border-radius: 12px;         /* Bo góc */
+            --box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08); /* Đổ bóng */
+        }
+
+        /* --- Thiết lập cơ bản --- */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0 auto;
-            max-width: 800px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
             padding: 20px;
-            color: #333;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+
+        /* --- Bố cục chính --- */
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: var(--container-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
         }
+
+        /* --- Header & Tiêu đề chính --- */
         h1 {
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
+            color: var(--primary-color);
+            font-size: 2.25em; /* 36px */
+            margin-bottom: 0.5em;
+            font-weight: 700;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 15px;
         }
+
+        .last-updated {
+            font-size: 0.95em;
+            color: var(--text-secondary-color);
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+        
+        /* --- Tiêu đề các mục --- */
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.6em; /* 25.6px */
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: var(--text-color);
+            font-size: 1.25em; /* 20px */
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* --- Nội dung văn bản & Link --- */
+        p, li {
+            font-size: 1.05em; /* 16.8px */
+            color: #495057;
+            margin-bottom: 1em;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+        
+        strong {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
         a {
-            color: #3498db;
+            color: var(--primary-color);
             text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
         }
+
         a:hover {
+            color: #00418a;
             text-decoration: underline;
         }
+
         code {
-            background-color: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: "Courier New", Courier, monospace;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-family: "SF Mono", "Courier New", monospace;
+            font-size: 0.95em;
         }
-        .last-updated {
-            font-size: 0.9em;
-            color: #7f8c8d;
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.95em;
+            color: var(--text-secondary-color);
+            border-top: 1px solid var(--border-color);
+            padding-top: 25px;
         }
+
     </style>
 </head>
 <body>
 
-    <h1>Chính sách Quyền riêng tư cho DishLocal</h1>
-    <p class="last-updated">Cập nhật lần cuối: 25 tháng 6, 2025</p>
-
-    <p>Chính sách Quyền riêng tư này mô tả các chính sách và quy trình của chúng tôi, <strong>Bright Torch Studio</strong> ("chúng tôi"), về việc thu thập, sử dụng và tiết lộ thông tin của bạn khi bạn sử dụng ứng dụng di động <strong>DishLocal</strong> ("Dịch vụ").</p>
-    <p>Bằng cách sử dụng Dịch vụ, bạn đồng ý với việc thu thập và sử dụng thông tin theo Chính sách Quyền riêng tư này.</p>
-
-    <h2>1. Các loại dữ liệu chúng tôi thu thập và mục đích sử dụng</h2>
-    <p>Chúng tôi thu thập các loại thông tin sau để cung cấp và cải thiện Dịch vụ cho bạn:</p>
-
-    <h3>A. Dữ liệu bạn cung cấp cho chúng tôi</h3>
-    <ul>
-        <li><strong>Thông tin tài khoản:</strong> Khi bạn đăng nhập bằng tài khoản Google, chúng tôi thu thập địa chỉ email và tên của bạn để tạo và quản lý tài khoản, đồng thời định danh bạn trong Dịch vụ.</li>
-        <li><strong>Nội dung do người dùng tạo:</strong> Chúng tôi thu thập thông tin bạn đăng tải lên Dịch vụ, chẳng hạn như các bài đánh giá, bình luận và hình ảnh món ăn/nhà hàng.</li>
-    </ul>
-
-    <h3>B. Dữ liệu được thu thập khi sử dụng ứng dụng (với sự cho phép của bạn)</h3>
-    <ul>
-        <li><strong>Thông tin Vị trí:</strong> Với sự cho phép của bạn, chúng tôi truy cập vị trí chính xác của thiết bị để:
-            <ul>
-                <li>Hiển thị các nhà hàng/quán ăn ở gần bạn và tính toán khoảng cách.</li>
-                <li>Gắn thẻ vị trí hiện tại của bạn vào các bài viết mà bạn đăng tải.</li>
-            </ul>
-            Bạn có thể bật hoặc tắt quyền truy cập vị trí bất cứ lúc nào trong cài đặt thiết bị của mình.
-        </li>
-        <li><strong>Thông tin từ Camera:</strong> Với sự cho phép của bạn, chúng tôi truy cập camera của thiết bị để cho phép bạn chụp ảnh và đăng tải trực tiếp lên Dịch vụ. <strong>Chúng tôi không truy cập vào thư viện ảnh hoặc video đã có sẵn trên thiết bị của bạn.</strong></li>
-    </ul>
-
-    <h2>2. Cách chúng tôi chia sẻ thông tin của bạn</h2>
-    <p>Chúng tôi không bán dữ liệu cá nhân của bạn. Tuy nhiên, chúng tôi có thể chia sẻ thông tin của bạn với các nhà cung cấp dịch vụ bên thứ ba để vận hành, duy trì và cải thiện Dịch vụ. Các đối tác chính của chúng tôi bao gồm:</p>
-    <ul>
-        <li><strong>Supabase:</strong> Chúng tôi sử dụng Supabase làm nền tảng backend (Backend-as-a-Service) để xác thực người dùng, lưu trữ cơ sở dữ liệu (thông tin tài khoản, bài đăng) và lưu trữ file.</li>
-        <li><strong>Cloudinary:</strong> Tất cả hình ảnh bạn tải lên Dịch vụ được lưu trữ và quản lý thông qua dịch vụ của Cloudinary để tối ưu hóa việc hiển thị và tốc độ tải.</li>
-        <li><strong>OpenAI:</strong> Chúng tôi có thể gửi nội dung do bạn tạo (ví dụ: văn bản trong bài đánh giá) qua API kiểm duyệt của OpenAI để tự động phát hiện và lọc các nội dung vi phạm chính sách cộng đồng của chúng tôi (ví dụ: ngôn từ thù ghét, nội dung không phù hợp).</li>
-    </ul>
-    <p>Chúng tôi cũng có thể tiết lộ thông tin của bạn nếu pháp luật yêu cầu hoặc để bảo vệ quyền và sự an toàn của Bright Torch Studio, người dùng của chúng tôi và cộng đồng.</p>
-
-    <h2>3. Lưu trữ và Xóa dữ liệu</h2>
-    <h3>A. Lưu trữ dữ liệu</h3>
-    <p>Chúng tôi sẽ lưu giữ dữ liệu cá nhân của bạn chỉ trong thời gian cần thiết cho các mục đích được nêu trong Chính sách Quyền riêng tư này, hoặc cho đến khi bạn yêu cầu xóa tài khoản.</p>
+    <div class="container">
+        <h1>Chính sách Quyền riêng tư cho DishLocal</h1>
+        <p class="last-updated">Cập nhật lần cuối: 25 tháng 6, 2025</p>
     
-    <h3>B. Quyền xóa dữ liệu của bạn</h3>
-    <p>Bạn có quyền yêu cầu xóa vĩnh viễn tài khoản và tất cả dữ liệu cá nhân liên quan của mình. Dữ liệu bị xóa sẽ bao gồm thông tin tài khoản, tất cả các bài đăng, bình luận và hình ảnh bạn đã tải lên.</p>
-    <p>Để thực hiện quyền này, vui lòng gửi yêu cầu của bạn thông qua một trong hai cách sau:</p>
-    <ol>
-        <li><strong>Qua biểu mẫu trực tuyến (khuyên dùng):</strong> Truy cập và điền đầy đủ thông tin vào biểu mẫu yêu cầu xóa dữ liệu của chúng tôi tại đây: <br>
-            <strong><a href="https://forms.gle/xuXuVJ2CEBkCGj869" target="_blank">Yêu Cầu Xóa Tài Khoản DishLocal</a></strong>
-        </li>
-        <li><strong>Qua Email:</strong> Gửi email với tiêu đề "Yêu cầu Xóa Tài khoản" tới địa chỉ <code>brighttorchstudio@gmail.com</code> từ email bạn đã dùng để đăng ký.</li>
-    </ol>
-    <p>Xin lưu ý rằng chúng tôi có thể cần giữ lại một số thông tin nhất định khi có nghĩa vụ pháp lý hoặc cơ sở hợp pháp để làm như vậy.</p>
+        <p>Chính sách Quyền riêng tư này mô tả các chính sách và quy trình của chúng tôi, <strong>Bright Torch Studio</strong> ("chúng tôi"), về việc thu thập, sử dụng và tiết lộ thông tin của bạn khi bạn sử dụng ứng dụng di động <strong>DishLocal</strong> ("Dịch vụ").</p>
+        <p>Bằng cách sử dụng Dịch vụ, bạn đồng ý với việc thu thập và sử dụng thông tin theo Chính sách Quyền riêng tư này.</p>
+    
+        <h2>1. Dữ liệu Chúng tôi Thu thập & Mục đích</h2>
+        <p>Chúng tôi thu thập các loại thông tin sau để cung cấp và cải thiện Dịch vụ cho bạn:</p>
+    
+        <h3>A. Dữ liệu bạn cung cấp trực tiếp</h3>
+        <ul>
+            <li><strong>Thông tin tài khoản:</strong> Khi bạn đăng nhập bằng tài khoản Google, chúng tôi thu thập địa chỉ email và tên của bạn để tạo và quản lý tài khoản, đồng thời định danh bạn trong Dịch vụ.</li>
+            <li><strong>Nội dung do người dùng tạo:</strong> Chúng tôi thu thập thông tin bạn đăng tải lên Dịch vụ, chẳng hạn như các bài đánh giá, bình luận và hình ảnh món ăn/nhà hàng.</li>
+        </ul>
+    
+        <h3>B. Dữ liệu được thu thập khi sử dụng ứng dụng</h3>
+        <ul>
+            <li><strong>Thông tin Vị trí:</strong> Với sự cho phép của bạn, chúng tôi truy cập vị trí chính xác của thiết bị để hiển thị các nhà hàng gần bạn và gắn thẻ vị trí vào bài viết của bạn. Bạn có thể bật hoặc tắt quyền này bất cứ lúc nào trong cài đặt thiết bị.</li>
+            <li><strong>Thông tin từ Camera:</strong> Với sự cho phép của bạn, chúng tôi truy cập camera để bạn chụp ảnh và đăng tải trực tiếp lên Dịch vụ. <strong>Chúng tôi không truy cập vào thư viện ảnh hoặc video đã có sẵn trên thiết bị của bạn.</strong></li>
+        </ul>
+    
+        <h2>2. Cách Chúng tôi Chia sẻ Thông tin</h2>
+        <p>Chúng tôi không bán dữ liệu cá nhân của bạn. Tuy nhiên, chúng tôi có thể chia sẻ thông tin với các nhà cung cấp dịch vụ bên thứ ba để vận hành và cải thiện Dịch vụ. Các đối tác chính bao gồm:</p>
+        <ul>
+            <li><strong>Supabase:</strong> Được sử dụng làm nền tảng backend để xác thực người dùng, lưu trữ cơ sở dữ liệu (tài khoản, bài đăng) và lưu trữ file.</li>
+            <li><strong>Cloudinary:</strong> Tất cả hình ảnh bạn tải lên được lưu trữ và quản lý qua Cloudinary để tối ưu hóa hiển thị và tốc độ.</li>
+            <li><strong>SightEngine:</strong> Để đảm bảo an toàn cho cộng đồng và tuân thủ <a href="#">Chính sách CSAE</a>, tất cả hình ảnh bạn tải lên đều được gửi qua API của SightEngine để kiểm duyệt tự động. Quá trình này giúp phát hiện và ngăn chặn các nội dung không phù hợp.</li>
+        </ul>
+        <p>Chúng tôi cũng có thể tiết lộ thông tin của bạn nếu pháp luật yêu cầu hoặc để bảo vệ quyền và sự an toàn của Bright Torch Studio, người dùng của chúng tôi và cộng đồng.</p>
+    
+        <h2>3. Lưu trữ và Xóa dữ liệu</h2>
+        <h3>A. Lưu trữ dữ liệu</h3>
+        <p>Chúng tôi sẽ lưu giữ dữ liệu cá nhân của bạn chỉ trong thời gian cần thiết cho các mục đích được nêu trong Chính sách này, hoặc cho đến khi bạn yêu cầu xóa tài khoản.</p>
+        
+        <h3>B. Quyền xóa dữ liệu của bạn</h3>
+        <p>Bạn có quyền yêu cầu xóa vĩnh viễn tài khoản và tất cả dữ liệu cá nhân liên quan. Để thực hiện, vui lòng gửi yêu cầu qua một trong hai cách sau:</p>
+        <ol>
+            <li><strong>Qua biểu mẫu (khuyên dùng):</strong> Truy cập và điền thông tin tại: <br>
+                <strong><a href="https://forms.gle/xuXuVJ2CEBkCGj869" target="_blank">Yêu Cầu Xóa Tài Khoản DishLocal</a></strong>
+            </li>
+            <li><strong>Qua Email:</strong> Gửi email có tiêu đề "Yêu cầu Xóa Tài khoản" tới <code>brighttorchstudio@gmail.com</code> từ email bạn đã dùng để đăng ký.</li>
+        </ol>
+        <p>Xin lưu ý rằng chúng tôi có thể cần giữ lại một số thông tin nhất định khi có nghĩa vụ pháp lý hoặc cơ sở hợp pháp để làm như vậy.</p>
+    
+        <h2>4. Bảo mật dữ liệu</h2>
+        <p>Bảo mật dữ liệu của bạn rất quan trọng đối với chúng tôi. Chúng tôi nỗ lực sử dụng các biện pháp bảo mật được chấp nhận về mặt thương mại. Tuy nhiên, không có phương thức truyền tải qua Internet hoặc lưu trữ điện tử nào là an toàn 100%, và chúng tôi không thể đảm bảo an ninh tuyệt đối.</p>
+    
+        <h2>5. Quyền riêng tư của Trẻ em</h2>
+        <p>Dịch vụ của chúng tôi không dành cho bất kỳ ai dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân từ trẻ em dưới 13 tuổi. Nếu bạn là cha mẹ hoặc người giám hộ và biết rằng con mình đã cung cấp dữ liệu cho chúng tôi, vui lòng liên hệ ngay lập tức.</p>
+    
+        <h2>6. Thay đổi đối với Chính sách này</h2>
+        <p>Chúng tôi có thể cập nhật Chính sách Quyền riêng tư của mình theo thời gian. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách mới trên trang này và cập nhật ngày "Cập nhật lần cuối" ở đầu trang.</p>
+    
+        <h2>7. Liên hệ với Chúng tôi</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách này, vui lòng liên hệ với chúng tôi qua email:</p>
+        <p><strong><a href="mailto:brighttorchstudio@gmail.com">brighttorchstudio@gmail.com</a></strong></p>
 
-    <h2>4. Bảo mật dữ liệu</h2>
-    <p>Bảo mật dữ liệu của bạn là rất quan trọng đối với chúng tôi. Chúng tôi nỗ lực sử dụng các biện pháp bảo mật được chấp nhận về mặt thương mại, bao gồm việc hợp tác với các nhà cung cấp dịch vụ uy tín như Supabase và Cloudinary. Tuy nhiên, không có phương thức truyền tải qua Internet hoặc lưu trữ điện tử nào là an toàn 100%, và chúng tôi không thể đảm bảo an ninh tuyệt đối.</p>
-
-    <h2>5. Quyền riêng tư của trẻ em</h2>
-    <p>Dịch vụ của chúng tôi không dành cho bất kỳ ai dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân từ trẻ em dưới 13 tuổi. Nếu bạn là cha mẹ hoặc người giám hộ và biết rằng con mình đã cung cấp dữ liệu cho chúng tôi, vui lòng liên hệ ngay lập tức.</p>
-
-    <h2>6. Thay đổi đối với Chính sách này</h2>
-    <p>Chúng tôi có thể cập nhật Chính sách Quyền riêng tư của mình theo thời gian. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách Quyền riêng tư mới trên trang này và cập nhật ngày "Cập nhật lần cuối" ở đầu trang.</p>
-
-    <h2>7. Liên hệ với chúng tôi</h2>
-    <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách Quyền riêng tư này, vui lòng liên hệ với chúng tôi qua email:</p>
-    <p><strong><a href="mailto:brighttorchstudio@gmail.com">brighttorchstudio@gmail.com</a></strong></p>
-
+        <footer>
+            <p>© 2025 Bright Torch Studio. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
 </body>
 </html>
