@@ -4,190 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chính sách Quyền riêng tư - DishLocal</title>
-    <!-- Thêm thư viện Font Awesome cho icon -->
+    <!-- Thư viện Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- Biến CSS để dễ dàng tùy chỉnh --- */
+        /* --- BIẾN CSS CHO GIAO DIỆN CHUYÊN NGHIỆP --- */
         :root {
-            --primary-color: #0056b3;      /* Xanh dương đậm chuyên nghiệp */
-            --danger-color: #dc3545;       /* Đỏ cho cảnh báo khẩn cấp */
-            --text-color: #343a40;         /* Màu chữ chính (xám đậm) */
-            --text-secondary-color: #6c757d;/* Màu chữ phụ */
-            --bg-color: #f8f9fa;           /* Màu nền trang */
-            --container-bg: #ffffff;       /* Màu nền khối nội dung */
-            --border-color: #dee2e6;       /* Màu viền */
-            --border-radius: 12px;         /* Bo góc */
-            --box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08); /* Đổ bóng */
+            --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            
+            --primary-color: #005A9C;      /* Xanh dương đậm, sang trọng */
+            --danger-color: #D92D20;        /* Đỏ cảnh báo rõ ràng */
+            
+            --text-primary: #1D2939;      /* Xám đậm cho nội dung chính */
+            --text-secondary: #475467;    /* Xám nhạt hơn cho nội dung phụ */
+            
+            --bg-page: #F9FAFB;            /* Màu nền trang rất nhạt */
+            --bg-container: #FFFFFF;        /* Nền khối nội dung trắng */
+            
+            --border-color: #EAECF0;        /* Màu viền rất nhạt */
+            --border-radius-lg: 16px;       /* Bo góc lớn, hiện đại */
+            --border-radius-md: 10px;       /* Bo góc vừa */
+
+            --shadow-lg: 0 12px 24px -4px rgba(16, 24, 40, 0.06), 0 8px 16px -4px rgba(16, 24, 40, 0.04);
         }
 
-        /* --- Thiết lập cơ bản --- */
-        html {
-            scroll-behavior: smooth;
-        }
+        /* --- THIẾT LẬP CƠ BẢN --- */
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            font-family: var(--font-family-sans);
+            line-height: 1.8;
+            color: var(--text-primary);
+            background-color: var(--bg-page);
             margin: 0;
-            padding: 20px;
+            padding: 24px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* --- Bố cục chính --- */
+        /* --- BỐ CỤC CHÍNH --- */
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 40px auto;
-            padding: 40px;
-            background-color: var(--container-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
+            background-color: var(--bg-container);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
         }
 
-        /* --- Header & Tiêu đề chính --- */
+        .main-content { padding: 20px 48px 48px; }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            padding: 40px 40px 32px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: #FDFDFD;
+        }
+        
+        .header-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #e3f2ff, #ffffff);
+            box-shadow: 0 4px 12px rgba(0, 90, 156, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .header-icon i { font-size: 32px; color: var(--primary-color); }
+        
         h1 {
-            color: var(--primary-color);
-            font-size: 2.25em; /* 36px */
-            margin-bottom: 0.5em;
+            color: var(--text-primary);
+            font-size: 2.5em;
             font-weight: 700;
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 15px;
+            margin: 0 0 8px;
         }
 
         .last-updated {
-            font-size: 0.95em;
-            color: var(--text-secondary-color);
-            margin-top: -10px;
-            margin-bottom: 30px;
-        }
-        
-        /* --- Tiêu đề các mục --- */
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 1px solid #e9ecef;
-            padding-bottom: 12px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.6em; /* 25.6px */
-            font-weight: 600;
-        }
-        
-        h3 {
-            color: var(--text-color);
-            font-size: 1.25em; /* 20px */
-            font-weight: 600;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            font-size: 1em;
+            color: var(--text-secondary);
+            margin: 0;
         }
 
-        /* --- Nội dung văn bản & Link --- */
+        /* --- TIÊU ĐỀ CÁC MỤC --- */
+        h2 {
+            color: var(--text-primary);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            font-size: 1.75em;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.25em;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        /* --- NỘI DUNG VĂN BẢN --- */
         p, li {
-            font-size: 1.05em; /* 16.8px */
-            color: #495057;
+            font-size: 1.05em;
+            color: var(--text-secondary);
             margin-bottom: 1em;
         }
 
-        ul, ol {
-            padding-left: 25px;
-        }
+        ul, ol { padding-left: 20px; list-style-type: none; }
+        ul li, ol li { position: relative; padding-left: 30px; }
         
-        strong {
-            color: var(--text-color);
-            font-weight: 600;
+        ul li::before {
+            content: "\f058"; /* fa-check-circle */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            top: 6px;
+            font-size: 18px;
         }
+
+        ol { counter-reset: item; }
+        ol li::before {
+            content: counter(item);
+            counter-increment: item;
+            color: var(--bg-container);
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+
+        strong, b { color: var(--text-primary); font-weight: 600; }
 
         a {
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+            position: relative;
+            transition: color 0.3s ease;
         }
-
-        a:hover {
-            color: #00418a;
-            text-decoration: underline;
+        a:hover { color: #003d6b; }
+        a::after {
+            content: ''; position: absolute; width: 100%; height: 1px;
+            bottom: -2px; left: 0; background-color: var(--primary-color);
+            transform: scaleX(0); transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
         }
-
+        a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        
         code {
-            background-color: #e9ecef;
-            color: #495057;
-            padding: 3px 6px;
-            border-radius: 5px;
+            background-color: #F2F4F7; color: #344054;
+            padding: 4px 8px; border-radius: 6px;
             font-family: "SF Mono", "Courier New", monospace;
-            font-size: 0.95em;
+            font-size: 0.9em;
+            border: 1px solid var(--border-color);
         }
 
-        /* --- Footer --- */
+        /* --- FOOTER --- */
         footer {
             text-align: center;
-            margin-top: 50px;
-            font-size: 0.95em;
-            color: var(--text-secondary-color);
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #667085;
             border-top: 1px solid var(--border-color);
-            padding-top: 25px;
+            padding: 32px;
+            background-color: #FDFDFD;
         }
-
+        
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            body { padding: 16px; }
+            .container { margin: 20px auto; }
+            .main-content { padding: 16px 24px 32px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Chính sách Quyền riêng tư cho DishLocal</h1>
-        <p class="last-updated">Cập nhật lần cuối: 25 tháng 6, 2025</p>
-    
-        <p>Chính sách Quyền riêng tư này mô tả các chính sách và quy trình của chúng tôi, <strong>Bright Torch Studio</strong> ("chúng tôi"), về việc thu thập, sử dụng và tiết lộ thông tin của bạn khi bạn sử dụng ứng dụng di động <strong>DishLocal</strong> ("Dịch vụ").</p>
-        <p>Bằng cách sử dụng Dịch vụ, bạn đồng ý với việc thu thập và sử dụng thông tin theo Chính sách Quyền riêng tư này.</p>
-    
-        <h2>1. Dữ liệu Chúng tôi Thu thập & Mục đích</h2>
-        <p>Chúng tôi thu thập các loại thông tin sau để cung cấp và cải thiện Dịch vụ cho bạn:</p>
-    
-        <h3>A. Dữ liệu bạn cung cấp trực tiếp</h3>
-        <ul>
-            <li><strong>Thông tin tài khoản:</strong> Khi bạn đăng nhập bằng tài khoản Google, chúng tôi thu thập địa chỉ email và tên của bạn để tạo và quản lý tài khoản, đồng thời định danh bạn trong Dịch vụ.</li>
-            <li><strong>Nội dung do người dùng tạo:</strong> Chúng tôi thu thập thông tin bạn đăng tải lên Dịch vụ, chẳng hạn như các bài đánh giá, bình luận và hình ảnh món ăn/nhà hàng.</li>
-        </ul>
-    
-        <h3>B. Dữ liệu được thu thập khi sử dụng ứng dụng</h3>
-        <ul>
-            <li><strong>Thông tin Vị trí:</strong> Với sự cho phép của bạn, chúng tôi truy cập vị trí chính xác của thiết bị để hiển thị các nhà hàng gần bạn và gắn thẻ vị trí vào bài viết của bạn. Bạn có thể bật hoặc tắt quyền này bất cứ lúc nào trong cài đặt thiết bị.</li>
-            <li><strong>Thông tin từ Camera:</strong> Với sự cho phép của bạn, chúng tôi truy cập camera để bạn chụp ảnh và đăng tải trực tiếp lên Dịch vụ. <strong>Chúng tôi không truy cập vào thư viện ảnh hoặc video đã có sẵn trên thiết bị của bạn.</strong></li>
-        </ul>
-    
-        <h2>2. Cách Chúng tôi Chia sẻ Thông tin</h2>
-        <p>Chúng tôi không bán dữ liệu cá nhân của bạn. Tuy nhiên, chúng tôi có thể chia sẻ thông tin với các nhà cung cấp dịch vụ bên thứ ba để vận hành và cải thiện Dịch vụ. Các đối tác chính bao gồm:</p>
-        <ul>
-            <li><strong>Supabase:</strong> Được sử dụng làm nền tảng backend để xác thực người dùng, lưu trữ cơ sở dữ liệu (tài khoản, bài đăng) và lưu trữ file.</li>
-            <li><strong>Cloudinary:</strong> Tất cả hình ảnh bạn tải lên được lưu trữ và quản lý qua Cloudinary để tối ưu hóa hiển thị và tốc độ.</li>
-            <li><strong>SightEngine:</strong> Để đảm bảo an toàn cho cộng đồng và tuân thủ <a href="#">Chính sách CSAE</a>, tất cả hình ảnh bạn tải lên đều được gửi qua API của SightEngine để kiểm duyệt tự động. Quá trình này giúp phát hiện và ngăn chặn các nội dung không phù hợp.</li>
-        </ul>
-        <p>Chúng tôi cũng có thể tiết lộ thông tin của bạn nếu pháp luật yêu cầu hoặc để bảo vệ quyền và sự an toàn của Bright Torch Studio, người dùng của chúng tôi và cộng đồng.</p>
-    
-        <h2>3. Lưu trữ và Xóa dữ liệu</h2>
-        <h3>A. Lưu trữ dữ liệu</h3>
-        <p>Chúng tôi sẽ lưu giữ dữ liệu cá nhân của bạn chỉ trong thời gian cần thiết cho các mục đích được nêu trong Chính sách này, hoặc cho đến khi bạn yêu cầu xóa tài khoản.</p>
-        
-        <h3>B. Quyền xóa dữ liệu của bạn</h3>
-        <p>Bạn có quyền yêu cầu xóa vĩnh viễn tài khoản và tất cả dữ liệu cá nhân liên quan. Để thực hiện, vui lòng gửi yêu cầu qua một trong hai cách sau:</p>
-        <ol>
-            <li><strong>Qua biểu mẫu (khuyên dùng):</strong> Truy cập và điền thông tin tại: <br>
-                <strong><a href="https://forms.gle/xuXuVJ2CEBkCGj869" target="_blank">Yêu Cầu Xóa Tài Khoản DishLocal</a></strong>
-            </li>
-            <li><strong>Qua Email:</strong> Gửi email có tiêu đề "Yêu cầu Xóa Tài khoản" tới <code>brighttorchstudio@gmail.com</code> từ email bạn đã dùng để đăng ký.</li>
-        </ol>
-        <p>Xin lưu ý rằng chúng tôi có thể cần giữ lại một số thông tin nhất định khi có nghĩa vụ pháp lý hoặc cơ sở hợp pháp để làm như vậy.</p>
-    
-        <h2>4. Bảo mật dữ liệu</h2>
-        <p>Bảo mật dữ liệu của bạn rất quan trọng đối với chúng tôi. Chúng tôi nỗ lực sử dụng các biện pháp bảo mật được chấp nhận về mặt thương mại. Tuy nhiên, không có phương thức truyền tải qua Internet hoặc lưu trữ điện tử nào là an toàn 100%, và chúng tôi không thể đảm bảo an ninh tuyệt đối.</p>
-    
-        <h2>5. Quyền riêng tư của Trẻ em</h2>
-        <p>Dịch vụ của chúng tôi không dành cho bất kỳ ai dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân từ trẻ em dưới 13 tuổi. Nếu bạn là cha mẹ hoặc người giám hộ và biết rằng con mình đã cung cấp dữ liệu cho chúng tôi, vui lòng liên hệ ngay lập tức.</p>
-    
-        <h2>6. Thay đổi đối với Chính sách này</h2>
-        <p>Chúng tôi có thể cập nhật Chính sách Quyền riêng tư của mình theo thời gian. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách mới trên trang này và cập nhật ngày "Cập nhật lần cuối" ở đầu trang.</p>
-    
-        <h2>7. Liên hệ với Chúng tôi</h2>
-        <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách này, vui lòng liên hệ với chúng tôi qua email:</p>
-        <p><strong><a href="mailto:brighttorchstudio@gmail.com">brighttorchstudio@gmail.com</a></strong></p>
+        <header>
+            <div class="header-icon">
+                <i class="fa-solid fa-file-shield"></i>
+            </div>
+            <h1>Chính sách Quyền riêng tư</h1>
+            <p class="last-updated">Cập nhật lần cuối: 25 tháng 6, 2025</p>
+        </header>
+
+        <div class="main-content">
+            <main>
+                <p>Chính sách Quyền riêng tư này mô tả các chính sách và quy trình của chúng tôi, <strong>Bright Torch Studio</strong> ("chúng tôi"), về việc thu thập, sử dụng và tiết lộ thông tin của bạn khi bạn sử dụng ứng dụng di động <strong>DishLocal</strong> ("Dịch vụ").</p>
+                <p>Bằng cách sử dụng Dịch vụ, bạn đồng ý với việc thu thập và sử dụng thông tin theo Chính sách Quyền riêng tư này.</p>
+            
+                <h2>1. Dữ liệu Chúng tôi Thu thập & Mục đích</h2>
+                <p>Chúng tôi thu thập các loại thông tin sau đây để cung cấp và cải thiện Dịch vụ cho bạn:</p>
+            
+                <h3>A. Dữ liệu bạn cung cấp trực tiếp</h3>
+                <ul>
+                    <li><strong>Thông tin tài khoản:</strong> Khi bạn đăng nhập bằng tài khoản Google, chúng tôi thu thập địa chỉ email và tên của bạn để tạo và quản lý tài khoản, đồng thời định danh bạn trong Dịch vụ.</li>
+                    <li><strong>Nội dung do người dùng tạo:</strong> Chúng tôi thu thập thông tin bạn đăng tải lên Dịch vụ, chẳng hạn như các bài đánh giá, bình luận và hình ảnh món ăn/nhà hàng.</li>
+                </ul>
+            
+                <h3>B. Dữ liệu được thu thập tự động</h3>
+                <ul>
+                    <li><strong>Thông tin Vị trí:</strong> Với sự cho phép của bạn, chúng tôi truy cập vị trí chính xác của thiết bị để hiển thị các nhà hàng gần bạn và gắn thẻ vị trí vào bài viết. Bạn có thể quản lý quyền này bất cứ lúc nào trong cài đặt thiết bị.</li>
+                    <li><strong>Thông tin từ Camera:</strong> Với sự cho phép của bạn, chúng tôi truy cập camera để bạn chụp ảnh và đăng tải trực tiếp lên Dịch vụ. <strong>Chúng tôi không truy cập vào thư viện ảnh hoặc video đã có sẵn trên thiết bị của bạn.</strong></li>
+                </ul>
+            
+                <h2>2. Cách Chúng tôi Chia sẻ Thông tin</h2>
+                <p>Chúng tôi không bán dữ liệu cá nhân của bạn. Tuy nhiên, chúng tôi có thể chia sẻ thông tin với các nhà cung cấp dịch vụ bên thứ ba để vận hành, bảo mật và cải thiện Dịch vụ. Các đối tác chính bao gồm:</p>
+                <ul>
+                    <li><strong>Supabase:</strong> Được sử dụng làm nền tảng backend để xác thực người dùng, lưu trữ cơ sở dữ liệu (tài khoản, bài đăng) và lưu trữ file.</li>
+                    <li><strong>Cloudinary:</strong> Tất cả hình ảnh bạn tải lên được lưu trữ và quản lý qua Cloudinary để tối ưu hóa hiển thị và tốc độ.</li>
+                    <li><strong>SightEngine:</strong> Để đảm bảo an toàn cho cộng đồng, tất cả hình ảnh bạn tải lên đều được gửi qua API của SightEngine để kiểm duyệt tự động, giúp phát hiện và ngăn chặn nội dung không phù hợp theo <a href="./csae_policy.html" target="_blank">Chính sách CSAE</a> của chúng tôi.</li>
+                    <li><strong>Hive.ai:</strong> Tương tự, toàn bộ nội dung văn bản bạn gửi (như bài viết, bình luận) được phân tích bởi công nghệ của Hive.ai để kiểm duyệt tự động, ngăn chặn ngôn từ vi phạm chính sách cộng đồng.</li>
+                </ul>
+                <p>Chúng tôi cũng có thể tiết lộ thông tin của bạn nếu pháp luật yêu cầu hoặc để bảo vệ quyền và sự an toàn của Bright Torch Studio, người dùng của chúng tôi và cộng đồng.</p>
+            
+                <h2>3. Lưu trữ và Xóa dữ liệu</h2>
+                <h3>A. Lưu trữ dữ liệu</h3>
+                <p>Chúng tôi sẽ lưu giữ dữ liệu cá nhân của bạn chỉ trong thời gian cần thiết cho các mục đích được nêu trong Chính sách này, hoặc cho đến khi bạn yêu cầu xóa tài khoản.</p>
+                
+                <h3>B. Quyền xóa dữ liệu của bạn</h3>
+                <p>Bạn có quyền yêu cầu xóa vĩnh viễn tài khoản và tất cả dữ liệu cá nhân liên quan. Để thực hiện, vui lòng gửi yêu cầu qua một trong hai cách sau:</p>
+                <ol>
+                    <li><strong>Qua biểu mẫu (khuyên dùng):</strong> Truy cập và điền thông tin tại: <br>
+                        <strong><a href="https://forms.gle/xuXuVJ2CEBkCGj869" target="_blank">Yêu Cầu Xóa Tài Khoản DishLocal</a></strong>
+                    </li>
+                    <li><strong>Qua Email:</strong> Gửi email có tiêu đề "Yêu cầu Xóa Tài khoản" tới <code>brighttorchstudio@gmail.com</code> từ email bạn đã dùng để đăng ký.</li>
+                </ol>
+                <p>Xin lưu ý rằng chúng tôi có thể cần giữ lại một số thông tin nhất định khi có nghĩa vụ pháp lý hoặc cơ sở hợp pháp để làm như vậy.</p>
+            
+                <h2>4. Bảo mật dữ liệu</h2>
+                <p>Bảo mật dữ liệu của bạn rất quan trọng đối với chúng tôi. Chúng tôi nỗ lực sử dụng các biện pháp bảo mật được chấp nhận về mặt thương mại. Tuy nhiên, không có phương thức truyền tải qua Internet hoặc lưu trữ điện tử nào là an toàn 100%, và chúng tôi không thể đảm bảo an ninh tuyệt đối.</p>
+            
+                <h2>5. Quyền riêng tư của Trẻ em</h2>
+                <p>Dịch vụ của chúng tôi không dành cho bất kỳ ai dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân từ trẻ em dưới 13 tuổi. Nếu bạn là cha mẹ hoặc người giám hộ và biết rằng con mình đã cung cấp dữ liệu cho chúng tôi, vui lòng liên hệ ngay lập tức.</p>
+            
+                <h2>6. Thay đổi đối với Chính sách này</h2>
+                <p>Chúng tôi có thể cập nhật Chính sách Quyền riêng tư của mình theo thời gian. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách mới trên trang này và cập nhật ngày "Cập nhật lần cuối" ở đầu trang.</p>
+            
+                <h2>7. Liên hệ với Chúng tôi</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách này, vui lòng liên hệ với chúng tôi qua email:</p>
+                <p><strong><a href="mailto:brighttorchstudio@gmail.com">brighttorchstudio@gmail.com</a></strong></p>
+            </main>
+        </div>
 
         <footer>
             <p>© 2025 Bright Torch Studio. Mọi quyền được bảo lưu.</p>
