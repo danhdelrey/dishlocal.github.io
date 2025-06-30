@@ -4,109 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chính sách Chống Bóc lột và Xâm hại Tình dục Trẻ em (CSAE) - DishLocal</title>
-    <!-- Thêm thư viện Font Awesome cho icon -->
+    <!-- Thư viện Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- Biến CSS để dễ dàng tùy chỉnh --- */
+        /* --- BIẾN CSS CHO GIAO DIỆN CHUYÊN NGHIỆP --- */
         :root {
-            --primary-color: #0056b3;      /* Xanh dương đậm chuyên nghiệp */
-            --danger-color: #dc3545;       /* Đỏ cho cảnh báo khẩn cấp */
-            --warning-color: #ffc107;      /* Vàng cho lưu ý */
-            --text-color: #343a40;         /* Màu chữ chính (xám đậm) */
-            --text-secondary-color: #6c757d;/* Màu chữ phụ */
-            --bg-color: #f8f9fa;           /* Màu nền trang */
-            --container-bg: #ffffff;       /* Màu nền khối nội dung */
-            --border-color: #dee2e6;       /* Màu viền */
-            --border-radius: 12px;         /* Bo góc */
-            --box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08); /* Đổ bóng */
+            --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            
+            --primary-color: #005A9C;      /* Xanh dương đậm, sang trọng */
+            --danger-color: #D92D20;        /* Đỏ cảnh báo rõ ràng */
+            --warning-color: #F79009;     /* Vàng cam cho lưu ý */
+            
+            --text-primary: #1D2939;      /* Xám đậm cho nội dung chính */
+            --text-secondary: #475467;    /* Xám nhạt hơn cho nội dung phụ */
+            
+            --bg-page: #F9FAFB;            /* Màu nền trang rất nhạt */
+            --bg-container: #FFFFFF;        /* Nền khối nội dung trắng */
+            
+            --border-color: #EAECF0;        /* Màu viền rất nhạt */
+            --border-radius-lg: 16px;       /* Bo góc lớn, hiện đại */
+            --border-radius-md: 10px;       /* Bo góc vừa */
+
+            --shadow-lg: 0 12px 24px -4px rgba(16, 24, 40, 0.06), 0 8px 16px -4px rgba(16, 24, 40, 0.04);
         }
 
-        /* --- Thiết lập cơ bản --- */
+        /* --- THIẾT LẬP CƠ BẢN --- */
         html {
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            font-family: var(--font-family-sans);
+            line-height: 1.8;
+            color: var(--text-primary);
+            background-color: var(--bg-page);
             margin: 0;
-            padding: 20px;
+            padding: 24px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* --- Bố cục chính --- */
+        /* --- BỐ CỤC CHÍNH --- */
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 40px auto;
-            padding: 40px;
-            background-color: var(--container-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
+            background-color: var(--bg-container);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            overflow: hidden; /* Đảm bảo các thành phần con không tràn ra ngoài */
         }
 
-        /* --- Header --- */
+        .main-content {
+            padding: 20px 48px 48px;
+        }
+
+        /* --- HEADER --- */
         header {
             text-align: center;
+            padding: 40px 40px 32px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 25px;
-            margin-bottom: 35px;
+            background-color: #FDFDFD;
+        }
+        
+        .header-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #e3f2ff, #ffffff);
+            box-shadow: 0 4px 12px rgba(0, 90, 156, 0.1);
+            margin-bottom: 24px;
         }
 
-        h1 {
+        .header-icon i {
+            font-size: 32px;
             color: var(--primary-color);
-            font-size: 2.25em; /* 36px */
-            margin-bottom: 0.25em;
+        }
+        
+        h1 {
+            color: var(--text-primary);
+            font-size: 2.5em; /* 40px */
             font-weight: 700;
+            margin: 0 0 8px;
         }
 
         header p {
             font-size: 1.1em; /* 17.6px */
-            color: var(--text-secondary-color);
-            margin: 5px 0 0;
+            color: var(--text-secondary);
+            margin: 0;
         }
 
-        /* --- Tiêu đề các mục --- */
+        /* --- TIÊU ĐỀ CÁC MỤC --- */
         h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 12px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.6em; /* 25.6px */
+            color: var(--text-primary);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            font-size: 1.75em; /* 28px */
             font-weight: 600;
         }
 
-        /* --- Nội dung văn bản --- */
+        /* --- NỘI DUNG VĂN BẢN --- */
         p, li {
-            font-size: 1.1em; /* 17.6px */
-            color: #495057;
+            font-size: 1.05em; /* ~17px */
+            color: var(--text-secondary);
             margin-bottom: 1em;
         }
 
         ul {
-            padding-left: 25px;
-            list-style-type: none; /* Bỏ bullet mặc định */
+            padding-left: 20px;
+            list-style-type: none;
         }
         
         ul li {
             position: relative;
-            padding-left: 20px;
+            padding-left: 30px;
         }
         
-        /* Tạo bullet tùy chỉnh */
         ul li::before {
-            content: "\f105"; /* Icon angle-right từ Font Awesome */
+            content: "\f058"; /* fa-check-circle */
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             color: var(--primary-color);
             position: absolute;
             left: 0;
-            top: 1px;
+            top: 6px;
+            font-size: 18px;
         }
-
+        
         strong, b {
-            color: var(--text-color);
+            color: var(--text-primary);
             font-weight: 600;
         }
 
@@ -114,135 +149,186 @@
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+            position: relative;
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #00418a;
-            text-decoration: underline;
+            color: #003d6b;
+        }
+        
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
         }
 
-        /* --- Các khối thông báo đặc biệt --- */
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+
+        /* --- KHỐI THÔNG BÁO ĐẶC BIỆT (CALLOUT) --- */
         .callout {
-            padding: 20px 25px 20px 60px; /* Thêm padding trái cho icon */
-            margin-top: 25px;
-            border-radius: 8px;
+            padding: 24px 24px 24px 80px;
+            margin: 32px 0;
+            border-radius: var(--border-radius-md);
             position: relative;
-            border-left: 5px solid;
+            border: 1px solid;
         }
 
         .callout::before {
+            content: '';
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
-            font-size: 1.5em;
+            font-size: 20px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
             position: absolute;
             left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
         }
         
-        .callout p {
+        .callout p:last-child, .callout ul:last-child {
             margin-bottom: 0;
         }
 
+        .callout ul { margin-top: 1em; }
+        .callout ul li::before { top: 7px; }
+
         .highlight-box {
-            background-color: #fff9e6;
-            border-color: var(--warning-color);
-            color: #664d03;
+            background-color: #EFF8FF;
+            border-color: #B2DDFF;
+            color: #175586;
         }
-        
         .highlight-box::before {
-            content: "\f071"; /* Icon exclamation-triangle */
-            color: var(--warning-color);
+            content: "\f0e7"; /* fa-bolt */
+            color: var(--primary-color);
+            background-color: #D1E9FF;
         }
+        .highlight-box ul li::before { color: var(--primary-color); }
 
         .emergency-info {
-            background-color: #f8d7da;
-            border-color: var(--danger-color);
-            color: #58151c;
+            background-color: #FFF9F9;
+            border-color: #FECDCA;
+            color: #912018;
         }
-        
         .emergency-info::before {
-            content: "\f095"; /* Icon phone */
+            content: "\f095"; /* fa-phone */
             color: var(--danger-color);
+            background-color: #FEE4E2;
         }
-
         .emergency-info b {
             font-size: 1.4em;
             color: var(--danger-color);
             font-weight: 700;
         }
 
-        /* --- Footer --- */
+        /* --- FOOTER --- */
         footer {
             text-align: center;
-            margin-top: 50px;
-            font-size: 0.95em;
-            color: var(--text-secondary-color);
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #667085; /* Gray-500 */
             border-top: 1px solid var(--border-color);
-            padding-top: 25px;
+            padding: 32px;
+            background-color: #FDFDFD;
         }
+        
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            body { padding: 16px; }
+            .container { margin: 20px auto; }
+            .main-content { padding: 16px 24px 32px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+        }
+
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
+            <div class="header-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
             <h1>Chính sách CSAE</h1>
-            <p><strong>Nền tảng:</strong> Ứng dụng di động DishLocal | <strong>Đơn vị phát triển:</strong> Bright Torch Studio</p>
+            <p><strong>Nền tảng:</strong> DishLocal | <strong>Phát triển bởi:</strong> Bright Torch Studio</p>
         </header>
 
-        <main>
-            <h2>1. Cam Kết của Chúng Tôi</h2>
-            <p>
-                Tại <strong>DishLocal</strong>, chúng tôi cam kết xây dựng một cộng đồng an toàn, văn minh và tôn trọng. Sự an toàn của trẻ em là ưu tiên tuyệt đối, và chúng tôi thực hiện chính sách <strong>không khoan nhượng</strong> đối với bất kỳ nội dung nào liên quan đến Bóc lột và Xâm hại Tình dục Trẻ em (CSAE).
-            </p>
-
-            <h2>2. Quy Trình Kiểm Duyệt Tự Động</h2>
-            <div class="highlight-box callout">
+        <div class="main-content">
+            <main>
+                <h2>1. Cam Kết của Chúng Tôi</h2>
                 <p>
-                    Để chủ động bảo vệ cộng đồng, DishLocal áp dụng quy trình kiểm duyệt nghiêm ngặt. <strong>Mọi hình ảnh do người dùng chụp đều được kiểm duyệt tự động bằng công nghệ của SightEngine</strong> trước khi đăng tải, giúp ngăn chặn nội dung vi phạm một cách hiệu quả ngay từ đầu.
+                    Tại <strong>DishLocal</strong>, chúng tôi cam kết xây dựng một cộng đồng an toàn, văn minh và tôn trọng. Sự an toàn của trẻ em là ưu tiên tuyệt đối, và chúng tôi thực hiện chính sách <strong>không khoan nhượng</strong> đối với bất kỳ nội dung nào liên quan đến Bóc lột và Xâm hại Tình dục Trẻ em (CSAE).
                 </p>
-            </div>
 
-            <h2>3. Nội Dung Bị Cấm Tuyệt Đối</h2>
-            <p>
-                Người dùng trên nền tảng DishLocal bị <strong>nghiêm cấm tuyệt đối</strong> đăng tải, chia sẻ hoặc lưu trữ bất kỳ hình ảnh nào có chứa:
-            </p>
-            <ul>
-                <li>Hành vi tình dục, hình ảnh khỏa thân hoặc gợi dục liên quan đến người dưới tuổi thành niên.</li>
-                <li>Nội dung khiêu dâm trẻ em dưới mọi hình thức.</li>
-                <li>Sự lạm dụng, bóc lột, hoặc xâm hại thân thể, tinh thần trẻ em.</li>
-                <li>Các hành vi dụ dỗ, lôi kéo trẻ em tham gia vào hoạt động tình dục.</li>
-            </ul>
+                <h2>2. Quy Trình Kiểm Duyệt Tự Động và Toàn Diện</h2>
+                <div class="highlight-box callout">
+                    <p>
+                        Để chủ động bảo vệ cộng đồng, DishLocal áp dụng một hệ thống kiểm duyệt đa lớp, tự động và nghiêm ngặt. Chúng tôi sử dụng các công nghệ AI hàng đầu để phân tích cả nội dung hình ảnh và văn bản <strong>trước khi chúng được đăng tải</strong>:
+                    </p>
+                    <ul>
+                        <li><strong>Kiểm duyệt Hình ảnh:</strong> Mọi hình ảnh do người dùng tải lên đều được phân tích tự động bằng công nghệ của <strong>SightEngine</strong> để phát hiện và chặn nội dung CSAE.</li>
+                        <li><strong>Kiểm duyệt Văn bản:</strong> Toàn bộ nội dung văn bản, bao gồm bài viết và bình luận, được quét và kiểm duyệt bởi công nghệ của <strong>Hive.ai</strong> để ngăn chặn ngôn từ dụ dỗ, mô tả hành vi lạm dụng hoặc các nội dung vi phạm khác.</li>
+                    </ul>
+                </div>
 
-            <h2>4. Hành Động Xử Lý Vi Phạm</h2>
-            <p>
-                Khi hệ thống của chúng tôi phát hiện hoặc nhận được báo cáo về nội dung vi phạm, chúng tôi sẽ thực hiện các hành động sau đây một cách tức thì và không cần thông báo trước:
-            </p>
-            <ul>
-                <li><strong>Xóa bỏ ngay lập tức</strong> nội dung vi phạm khỏi nền tảng.</li>
-                <li><strong>Đình chỉ vĩnh viễn</strong> tài khoản của người dùng đã thực hiện hành vi vi phạm.</li>
-                <li><strong>Báo cáo cho cơ quan chức năng:</strong> Chúng tôi có nghĩa vụ pháp lý và đạo đức phải báo cáo tất cả các trường hợp CSAE cho cơ quan công an tại Việt Nam và các tổ chức quốc tế có liên quan (như NCMEC) để điều tra và xử lý theo pháp luật.</li>
-            </ul>
+                <h2>3. Nội Dung Bị Cấm Tuyệt Đối</h2>
+                <p>
+                    Người dùng trên nền tảng DishLocal bị <strong>nghiêm cấm tuyệt đối</strong> đăng tải, chia sẻ hoặc lưu trữ bất kỳ nội dung hình ảnh hoặc văn bản nào có chứa:
+                </p>
+                <ul>
+                    <li>Hành vi tình dục, hình ảnh khỏa thân hoặc gợi dục liên quan đến người dưới tuổi thành niên.</li>
+                    <li>Nội dung khiêu dâm trẻ em dưới mọi hình thức, dù là hình ảnh, video hay mô tả bằng văn bản.</li>
+                    <li>Sự lạm dụng, bóc lột, hoặc xâm hại thân thể, tinh thần trẻ em.</li>
+                    <li>Các hành vi hoặc ngôn từ nhằm dụ dỗ, lôi kéo trẻ em tham gia vào hoạt động tình dục.</li>
+                </ul>
 
-            <h2>5. Trách Nhiệm của Người Dùng</h2>
-            <p>
-                Mỗi người dùng đều có vai trò quan trọng trong việc giữ cho cộng đồng DishLocal an toàn. Chúng tôi yêu cầu bạn tuân thủ nghiêm ngặt chính sách này, không tạo ra hoặc chia sẻ nội dung vi phạm, và chủ động báo cáo các hành vi đáng ngờ mà bạn phát hiện.
-            </p>
+                <h2>4. Hành Động Xử Lý Vi Phạm</h2>
+                <p>
+                    Khi hệ thống kiểm duyệt tự động của chúng tôi phát hiện hoặc chúng tôi nhận được báo cáo về nội dung vi phạm, chúng tôi sẽ thực hiện các hành động sau đây một cách tức thì và không cần thông báo trước:
+                </p>
+                <ul>
+                    <li><strong>Xóa bỏ ngay lập tức</strong> nội dung vi phạm khỏi nền tảng.</li>
+                    <li><strong>Đình chỉ vĩnh viễn</strong> tài khoản của người dùng đã thực hiện hành vi vi phạm.</li>
+                    <li><strong>Báo cáo cho cơ quan chức năng:</strong> Chúng tôi có nghĩa vụ pháp lý và đạo đức phải báo cáo tất cả các trường hợp CSAE cho cơ quan công an tại Việt Nam và các tổ chức quốc tế có liên quan (như NCMEC) để điều tra và xử lý theo pháp luật.</li>
+                </ul>
 
-            <h2>6. Báo Cáo & Hỗ Trợ Khẩn Cấp</h2>
-            <p>
-                Nếu bạn muốn báo cáo một nội dung, tài khoản đáng ngờ hoặc có câu hỏi về chính sách, vui lòng liên hệ với chúng tôi qua:
-            </p>
-            <p><strong>Email báo cáo:</strong> <a href="mailto:brighttorchstudio@gmail.com">brighttorchstudio@gmail.com</a></p>
+                <h2>5. Trách Nhiệm của Người Dùng</h2>
+                <p>
+                    Mỗi người dùng đều có vai trò quan trọng trong việc giữ cho cộng đồng DishLocal an toàn. Chúng tôi yêu cầu bạn tuân thủ nghiêm ngặt chính sách này và chủ động báo cáo các hành vi đáng ngờ mà bạn phát hiện.
+                </p>
 
-            <div class="emergency-info callout">
-                <p><strong>Trong trường hợp khẩn cấp hoặc bạn biết ai đó đang gặp nguy hiểm, hãy liên hệ ngay:</strong></p>
-                <p style="margin-top: 10px;">Tổng đài Quốc gia Bảo vệ Trẻ em: <b>111</b> (miễn phí, 24/7)</p>
-            </div>
-            
-        </main>
+                <h2>6. Báo Cáo & Hỗ Trợ Khẩn Cấp</h2>
+                <p>
+                    Nếu bạn muốn báo cáo một nội dung, tài khoản đáng ngờ hoặc có câu hỏi về chính sách, vui lòng liên hệ với chúng tôi qua email.
+                </p>
+                <p><strong>Email báo cáo:</strong> <a href="mailto:brighttorchstudio@gmail.com">brighttorchstudio@gmail.com</a></p>
+
+                <div class="emergency-info callout">
+                    <p><strong>TRƯỜNG HỢP KHẨN CẤP</strong></p>
+                    <p style="margin-top: 8px;">Nếu bạn biết ai đó đang gặp nguy hiểm, hãy liên hệ ngay Tổng đài Quốc gia Bảo vệ Trẻ em:</p>
+                    <p style="margin-top: 10px;"><b>111</b> (miễn phí, hoạt động 24/7)</p>
+                </div>
+                
+            </main>
+        </div>
 
         <footer>
             <p>© 2025 Bright Torch Studio. Mọi quyền được bảo lưu.</p>
